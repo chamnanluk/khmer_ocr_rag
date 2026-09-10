@@ -1,0 +1,13 @@
+experiment: e2_rq2_retrieval
+seed: 42
+tier: A+B-RAG
+dataset: tier_a_and_tier_b_rag
+conditions: [P0, P1, P2, P3, P4, P5]
+retrievers: [bm25, dense_bge_m3, hybrid_rrf]
+k_values: [1, 3, 5, 10]
+metrics: [recall, precision, hit_rate, mrr, ndcg]
+controls:
+  same_queries: true
+  same_relevance_judgments: true
+  frozen_chunking: true
+output_root: artifacts/results

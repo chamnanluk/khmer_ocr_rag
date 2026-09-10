@@ -1,0 +1,9 @@
+experiment: e4_rq3_matched_type
+seed: 42
+tier: A+B
+dataset: tier_a_controlled_plus_tier_b_natural_validation
+target_error_rate: 0.05
+error_families: [base, subscript, vowel, diacritic, kcc, unicode, boundary_insert, boundary_delete]
+metrics: [delta_recall@10, delta_mrr, delta_ndcg@10]
+parameterize_from_tier_b_confusions: true
+output_root: artifacts/results

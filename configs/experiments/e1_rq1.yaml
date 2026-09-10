@@ -1,0 +1,11 @@
+experiment: e1_rq1_upstream
+seed: 42
+tier: A+B-OCR
+dataset: tier_a_and_tier_b_ocr
+conditions: [P2, P3]
+metrics: [cer, normalized_cer, kcc_error_rate, boundary_precision, boundary_recall, boundary_f1, latency_ms, throughput]
+controls:
+  matched_backbone: true
+  matched_tokenizer: true
+  matched_hardware: true
+output_root: artifacts/results

@@ -1,0 +1,10 @@
+experiment: e3_rq3_rate_curve
+seed: 42
+tier: A
+dataset: tier_a_controlled
+error_rates: [0.0, 0.01, 0.02, 0.05, 0.10, 0.20]
+error_families: [base, subscript, vowel, diacritic, kcc, unicode, boundary_insert, boundary_delete]
+retrievers: [bm25, dense_bge_m3, hybrid_rrf]
+metrics: [recall@10, mrr, ndcg@10]
+log_every_edit: true
+output_root: artifacts/results

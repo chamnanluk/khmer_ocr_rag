@@ -1,0 +1,14 @@
+name: tier_a_controlled_modern_khmer
+manifest: data/manifests/tier_a.jsonl
+boundary_policy: human_verified_eval
+unicode_normalization: NFC
+planned_scale:
+  train_lines: 50000-100000
+  clean_eval_lines: 5000
+  human_verified_boundary_lines_min: 1000
+augmentations:
+  - blur
+  - jpeg_compression
+  - contrast
+  - noise
+  - perspective

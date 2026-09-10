@@ -1,0 +1,3 @@
+{"passage_id":"p1","document_id":"d1","text_gold":"ប្រទេសកម្ពុជាមានរាជធានីភ្នំពេញ។","text_condition":"ប្រទេសកម្ពុជា\u200bមាន\u200bរាជធានី\u200bភ្នំពេញ។","condition":"P0","source_span":"demo","provenance":{"license":"demo-only"}}
+{"passage_id":"p2","document_id":"d2","text_gold":"អង្គរវត្តស្ថិតនៅខេត្តសៀមរាប។","text_condition":"អង្គរវត្ត\u200bស្ថិតនៅ\u200bខេត្ត\u200bសៀមរាប។","condition":"P0","source_span":"demo","provenance":{"license":"demo-only"}}
+{"passage_id":"p3","document_id":"d3","text_gold":"ទន្លេមេគង្គហូរកាត់ប្រទេសកម្ពុជា។","text_condition":"ទន្លេមេគង្គ\u200bហូរកាត់\u200bប្រទេសកម្ពុជា។","condition":"P0","source_span":"demo","provenance":{"license":"demo-only"}}

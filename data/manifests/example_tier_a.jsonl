@@ -1,0 +1,1 @@
+{"sample_id":"A-demo-001","tier":"A","dataset":"demo","split":"test","modality":"document","image_path":"data/raw/demo/A-demo-001.png","text_gold":"ប្រទេសកម្ពុជាមានរាជធានីភ្នំពេញ","text_gold_nfc":"ប្រទេសកម្ពុជាមានរាជធានីភ្នំពេញ","text_gold_segmented":"ប្រទេសកម្ពុជា\u200bមាន\u200bរាជធានី\u200bភ្នំពេញ","boundary_source":"human","document_id":"demo-doc-1","license":"demo-only"}

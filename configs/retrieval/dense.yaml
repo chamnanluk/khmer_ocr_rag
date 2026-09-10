@@ -1,0 +1,6 @@
+retriever: dense
+model_name: BAAI/bge-m3
+similarity: cosine
+normalize_embeddings: true
+notes:
+  - Model is configurable; do not hard-code conclusions from a single checkpoint.

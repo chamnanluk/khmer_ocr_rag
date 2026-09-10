@@ -1,0 +1,14 @@
+rag:
+  top_k: 5
+  chunk_size: 384
+  chunk_overlap: 64
+  prompt_version: v1_grounded_abstain
+  generator_model: TO_BE_PINNED
+  temperature: 0.0
+  reranker: null
+freeze_within_comparison: true
+store:
+  retrieved_passage_ids: true
+  retrieved_context: true
+  prompt_hash: true
+  model_checkpoint: true

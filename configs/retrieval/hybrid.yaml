@@ -1,0 +1,6 @@
+retriever: reciprocal_rank_fusion
+rrf_k: 60
+candidate_k: 100
+components:
+  - configs/retrieval/bm25.yaml
+  - configs/retrieval/dense.yaml

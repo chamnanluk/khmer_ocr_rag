@@ -1,0 +1,9 @@
+recognizer: joint_ctc_research_impl
+recognizer_boundary_flag: 0
+segmenter: neural_kcc_boundary_segmenter
+fairness_controls:
+  same_ocr_backbone: true
+  same_tokenizer: true
+  same_vocab: true
+  same_data_split: true
+  same_hardware: true

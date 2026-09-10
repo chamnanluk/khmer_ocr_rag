@@ -1,0 +1,16 @@
+model: joint_ctc_research_impl
+tokenization: kcc_baseline
+boundary_token: "\u200b"
+boundary_control_flag: true
+encoder:
+  d_model: 512
+  transformer_layers: 3
+  heads: 8
+  ff_dim: 2048
+training:
+  loss: ctc
+  dropout: 0.1
+  seed: 42
+notes:
+  - Replace with official KTRWS adapter when official code/checkpoint is available.
+  - Use the same vocabulary/preprocessing for joint and non-joint comparison.

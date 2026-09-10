@@ -1,0 +1,32 @@
+title: "Beyond CER: Evaluating the Downstream Impact of Joint Khmer Text Recognition and Word Segmentation on Retrieval and RAG"
+scope:
+  language: Khmer
+  historical_main_experiment: false
+  tiers:
+    A: controlled modern Khmer
+    B_OCR: real modern Khmer OCR benchmarks
+    B_RAG: real modern Khmer document corpus
+research_questions:
+  RQ1: joint vs sequential recognition-segmentation accuracy and efficiency
+  RQ2: OCR/boundary error impact on sparse, dense, hybrid retrieval
+  RQ3: Khmer-specific error-family downstream damage
+  RQ4: upstream error impact on context and RAG answer quality
+conditions:
+  P0: gold text + gold boundaries
+  P1: OCR only
+  P2: OCR + sequential segmenter
+  P3: joint OCR + segmentation
+  P4: gold OCR + predicted segmentation
+  P5: OCR + gold segmentation
+controlled_error_rates: [0.0, 0.01, 0.02, 0.05, 0.10, 0.20]
+retrieval_families: [sparse, dense, hybrid]
+main_metrics:
+  upstream: [CER, normalized_CER, KCC_error_rate, boundary_F1, latency, throughput]
+  retrieval: [Recall@k, Precision@k, HitRate@k, MRR, nDCG@k]
+  rag: [context_precision, context_recall, faithfulness, answer_relevance, factual_correctness, answer_correctness]
+reproducibility:
+  fixed_seeds: true
+  immutable_manifests: true
+  pin_model_checkpoints: true
+  freeze_rag_within_comparison: true
+  log_every_controlled_edit: true

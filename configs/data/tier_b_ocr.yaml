@@ -1,0 +1,11 @@
+name: tier_b_real_modern_khmer_ocr
+manifest: data/manifests/tier_b_ocr.jsonl
+datasets:
+  - KHOB
+  - KhmerST
+  - WildKhmerST
+  - KH
+  - GKST
+  - KHT
+policy: use_official_splits_and_confirm_licenses
+report_by_modality: true

@@ -1,0 +1,2 @@
+{"query_id":"q1","question_km":"តើរាជធានីរបស់ប្រទេសកម្ពុជាគឺអ្វី?","question_for_retrieval":"រាជធានី\u200bប្រទេសកម្ពុជា\u200bភ្នំពេញ","answer_gold":"ភ្នំពេញ","relevant_passage_ids":["p1"],"supporting_passage_ids":["p1"],"answer_type":"short","annotator_status":"demo"}
+{"query_id":"q2","question_km":"តើអង្គរវត្តស្ថិតនៅខេត្តណា?","question_for_retrieval":"អង្គរវត្ត\u200bខេត្ត\u200bសៀមរាប","answer_gold":"សៀមរាប","relevant_passage_ids":["p2"],"supporting_passage_ids":["p2"],"answer_type":"short","annotator_status":"demo"}

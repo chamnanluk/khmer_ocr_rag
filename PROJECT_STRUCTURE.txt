@@ -1,0 +1,32 @@
+khmer_ocr_rag_codex/
+├── CODEX.md
+├── Dockerfile
+├── Makefile
+├── README.md
+├── pyproject.toml
+├── configs/
+│   ├── data/                 Tier A, Tier B-OCR, Tier B-RAG contracts
+│   ├── experiments/          E1–E5 mapped to RQ1–RQ4
+│   ├── ocr/                  joint and sequential settings
+│   ├── rag/                  frozen downstream configuration
+│   └── retrieval/            BM25, dense, hybrid settings
+├── data/
+│   ├── raw/                  not committed
+│   ├── processed/            not committed
+│   ├── manifests/            sample-level provenance/splits
+│   └── annotations/          passages, QA, boundaries, relevance
+├── src/khmer_ocr_rag/
+│   ├── data/                 schemas, Unicode/KCC, conditions, augmentation
+│   ├── ocr/                  CTC interface, vocabulary, joint model
+│   ├── segmentation/         sequential boundary model
+│   ├── perturbations/        Khmer-specific controlled errors
+│   ├── retrieval/            sparse/dense/hybrid retrievers
+│   ├── rag/                  generator interface and fixed RAG pipeline
+│   ├── metrics/              OCR/segmentation/retrieval metrics
+│   ├── evaluation/           timing, bootstrap, artifact writing
+│   ├── experiments/          experiment runners
+│   └── utils/                config + reproducibility helpers
+├── scripts/                  validation, rendering, demos, exports
+├── tests/                    research-critical unit tests
+├── docs/                     implementation plan, source scan, Codex backlog
+└── artifacts/                results/checkpoints/indexes/reports (not committed)

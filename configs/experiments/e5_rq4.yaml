@@ -1,0 +1,11 @@
+experiment: e5_rq4_rag
+seed: 42
+tier: B-RAG+A-selected
+dataset: tier_b_rag_plus_selected_tier_a
+conditions: [P0, P2, P3, P4, P5, noise_0.02, noise_0.05, noise_0.10]
+rag_config: configs/rag/fixed.yaml
+metrics: [context_precision, context_recall, context_relevance, faithfulness, answer_relevance, factual_correctness, answer_correctness]
+human_validation:
+  target_answers: 100-150
+  khmer_proficient_annotators: 2
+output_root: artifacts/results

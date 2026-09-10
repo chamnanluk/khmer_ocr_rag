@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "khmer-ocr-rag"
+version = "0.1.0"
+description = "Reproducible research framework for Khmer OCR/word-segmentation error propagation into retrieval and RAG."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.1",
+  "PyYAML>=6.0",
+  "regex>=2024.5.15",
+]
+
+[project.optional-dependencies]
+ocr = ["torch>=2.2", "torchvision>=0.17", "Pillow>=10.2"]
+dense = ["sentence-transformers>=3.0", "torch>=2.2"]
+faiss = ["faiss-cpu>=1.8"]
+rag = [
+  "transformers>=4.45",
+  "torch>=2.2",
+  "ragas==0.3.9",
+  # Ragas imports a compatibility module removed in langchain-community 0.4.2.
+  "langchain-community==0.4.1",
+]
+stats = ["scipy>=1.12", "statsmodels>=0.14"]
+dev = ["pytest>=8.0", "ruff>=0.5"]
+all = [
+  "torch>=2.2", "torchvision>=0.17", "Pillow>=10.2",
+  "sentence-transformers>=3.0", "faiss-cpu>=1.8",
+  "transformers>=4.45", "ragas==0.3.9", "langchain-community==0.4.1",
+  "scipy>=1.12", "statsmodels>=0.14",
+  "pytest>=8.0", "ruff>=0.5"
+]
+
+[project.scripts]
+khmer-rag = "khmer_ocr_rag.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+
+# Use NVIDIA CUDA 12.6 wheels on this Windows RTX 4060 development machine.
+# `explicit = true` keeps all non-PyTorch dependencies on PyPI.
+[tool.uv.sources]
+torch = { index = "pytorch-cu126" }
+torchvision = { index = "pytorch-cu126" }
+
+[[tool.uv.index]]
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
+explicit = true

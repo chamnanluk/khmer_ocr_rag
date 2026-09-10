@@ -1,0 +1,11 @@
+name: tier_b_real_modern_khmer_rag
+passages: data/annotations/tier_b_passages.jsonl
+qa: data/annotations/tier_b_qa.jsonl
+planned_scale:
+  documents: 200-500
+  chunks: 5000-10000
+  qa_pairs: 300-500
+requires:
+  - supporting_passage_ids
+  - source_document_ids
+  - license_provenance
