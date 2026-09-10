@@ -17,6 +17,21 @@ JSONL/CSV records should contain:
 - `document_id`: nullable parent document identifier
 - `license`: dataset license/provenance note
 
+### DATA-01 source preparation assumptions
+
+- `document_id` is the indivisible source-level split group.
+- Documents containing identical NFC-normalized text are joined into one split component to
+  prevent repeated text from leaking across train, validation, and test.
+- Split ratios target source components rather than exact row counts. Small datasets or large
+  duplicate components can therefore produce different realized row ratios.
+- Before image rendering, a prepared source row may have an empty `image_path`. Such a manifest
+  is valid for text preparation and segmentation work but is not trainable by the OCR pipeline.
+- Image rendering must populate `image_path` before OCR training.
+- If boundaries were created automatically, `metadata.boundary_generation` must identify the
+  automatic method and `boundary_source` must not claim `human` or `licensed_manual_corpus`.
+- DATA-01 consumes only local researcher-supplied or explicitly licensed JSONL/CSV inputs; it
+  performs no dataset downloads.
+
 ## Retrieval corpus
 
 Each passage record should contain:

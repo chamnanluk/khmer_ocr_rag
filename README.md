@@ -73,3 +73,6 @@ The repository includes a trainable *research implementation* of a joint CTC rec
 ## First milestone for Codex
 
 Open `CODEX.md` and implement tasks in order. The codebase is deliberately modular so Codex can work one issue/branch at a time without changing the experimental contract.
+
+The immediate, step-by-step development checklist is in
+[`docs/NEXT_STEPS.md`](docs/NEXT_STEPS.md).

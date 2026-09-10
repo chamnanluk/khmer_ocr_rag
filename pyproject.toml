@@ -43,6 +43,7 @@ khmer-rag = "khmer_ocr_rag.cli:main"
 where = ["src"]
 
 [tool.pytest.ini_options]
+addopts = "--basetemp=.pytest-tmp"
 pythonpath = ["src"]
 testpaths = ["tests"]
 
